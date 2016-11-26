@@ -15,6 +15,6 @@ while True:
     data, addr = sock.recvfrom(1024) # buffer size is 1024 bytes
     ip = addr[0]
     port = addr[1]
-    client = Client(ip, port)
+    client = Client("1", ip, port)
     print "Client-> ip:", client.ip, ", port: ", client.port
     print "Client-> data:", data
