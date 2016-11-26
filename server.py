@@ -1,7 +1,7 @@
 import socket
 from client import Client
 
-UDP_IP = "localhost" #"138.68.66.77"
+UDP_IP = "138.68.66.77" 
 UDP_PORT = 9876
 
 sock = socket.socket(socket.AF_INET, # Internet
