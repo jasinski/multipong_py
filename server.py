@@ -8,7 +8,7 @@ sock = socket.socket(socket.AF_INET, # Internet
                      socket.SOCK_DGRAM) # UDP
 sock.bind((UDP_IP, UDP_PORT))
 
-clients = []
+clients = list()
 
 print "Server up n runnin..."
 while True:
@@ -16,5 +16,10 @@ while True:
     ip = addr[0]
     port = addr[1]
     client = Client(ip, port)
+    clients.append(client)
+    for client in clients:
+        print("Client info:")
+        print(client.ip)
+        print(client.port)
     print "Client-> ip:", client.ip, ", port: ", client.port
     print "Client-> data:", data
