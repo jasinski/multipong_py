@@ -1,6 +1,5 @@
 class Client:
 
-    def __init__(self,/* clientId*/, ip, port):
-        #self.clientId = clientId
+    def __init__(self, ip, port):
         self.ip = ip
         self.port = port
