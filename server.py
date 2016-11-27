@@ -22,7 +22,7 @@ while True:
         if c.clientId == client.clientId:
             foundClient = true
 
-    if !foundClient:
+    if foundClient is False:
         clients.append(client)
 
 
