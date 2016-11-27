@@ -17,10 +17,10 @@ while True:
     #ip = addr[0]
     #port = addr[1]
     client = Client(addr, data)
-    foundClient = false
+    foundClient = False
     for c in clients:
         if c.clientId == client.clientId:
-            foundClient = true
+            foundClient = True
 
     if foundClient is False:
         clients.append(client)
