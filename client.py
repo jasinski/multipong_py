@@ -11,7 +11,7 @@ class Client:
         arr = self.dataStringToArray(data)
         self.clientId = arr[0]
         self.msgType = arr[1]
-        self.latestGameState = GameState(arr[2])
+        self.currentGameState = GameState(arr[2])
 
     def dataStringToArray(self, data):
         return data.split(":")

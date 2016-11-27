@@ -31,4 +31,4 @@ while True:
         print(client.clientId)
         print(client.ip)
         print(client.port)
-        print("(x: ", client.gameState.x, "y: ", client.gameState.y, ")")
+        print("(x: ", client.currentGameState.x, "y: ", client.currentGameState.y, ")")
