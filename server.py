@@ -26,9 +26,9 @@ while True:
         clients.append(client)
 
 
-    for client in clients:
-        print("Client info:")
+    for index, client in enumerate(clients):
+        print("Client ", index, " info:")
+        print(client.clientId)
         print(client.ip)
         print(client.port)
-    print "Client-> ip:", client.ip, ", port: ", client.port
-    print "Client-> data:", data
+        print("(x: ", client.gameState.x, "y: ", client.gameState.y, ")")
