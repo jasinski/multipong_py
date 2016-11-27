@@ -20,6 +20,7 @@ while True:
     foundClient = False
     for c in clients:
         if c.clientId == client.clientId:
+            c.currentGameState = client.currentGameState
             foundClient = True
 
     if foundClient is False:
