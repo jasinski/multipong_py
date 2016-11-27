@@ -23,6 +23,7 @@ class GameState:
         self.y = y
 
     def __init__(self, gameStateString):
+        print "gameStateString:", gameStateString
         arr = gameStateString.split(",")
         self.x = arr[0]
         self.y = arr[1]
