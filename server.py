@@ -1,5 +1,5 @@
 import socket
-from client import Client
+from client import Client, GameState
 
 UDP_IP = "138.68.66.77"
 UDP_PORT = 9876
@@ -13,10 +13,19 @@ clients = list()
 print "Server up n runnin..."
 while True:
     data, addr = sock.recvfrom(1024) # buffer size is 1024 bytes
-    ip = addr[0]
-    port = addr[1]
-    client = Client(ip, port)
-    clients.append(client)
+
+    #ip = addr[0]
+    #port = addr[1]
+    client = Client(addr, data)
+    foundClient = false
+    for c in clients:
+        if c.clientId == client.clientId:
+            foundClient = true
+
+    if !foundClient:
+        clients.append(client)
+
+
     for client in clients:
         print("Client info:")
         print(client.ip)
