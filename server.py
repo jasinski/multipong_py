@@ -1,5 +1,6 @@
 import socket
 from client import Client, GameState
+#from gamestate import GameState
 
 IP_LOCAL = "192.168.1.72" # Local here is mikes MACBOOK
 IP_SERVER = "138.68.66.77"
@@ -24,10 +25,11 @@ while True:
     client = Client(addr, data)
     foundClient = False
     for c in clients:
+        c.currentGameState = client.currentGameState
         if c.clientId == client.clientId:
-            c.currentGameState = client.currentGameState
             foundClient = True
 
+    # Adding new client that just "connected"
     if foundClient is False:
         clients.append(client)
 
