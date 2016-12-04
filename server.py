@@ -4,7 +4,7 @@ from client import Client, GameState
 
 IP_LOCAL = "192.168.1.72" # Local here is mikes MACBOOK
 IP_SERVER = "138.68.66.77"
-UDP_IP = IP_LOCAL
+UDP_IP = IP_SERVER
 
 UDP_PORT = 9876
 
